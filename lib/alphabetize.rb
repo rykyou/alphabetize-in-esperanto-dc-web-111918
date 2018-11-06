@@ -1,7 +1,8 @@
 require 'pry'
 
+ESPERANTO_ALPHABET = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz" #constant
+
 def alphabetize(arr)
-  arr.sort do |a, b| 
-    a <=> b
+  arr.sort_by |sentence|
   end
 end
