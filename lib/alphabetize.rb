@@ -2,9 +2,10 @@ require 'pry'
 
 ESPERANTO_ALPHABET = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz" #constant
 
-def alphabetize(array_of_strings)
-  array_of_strings.sort_by |string|
-    string.split('').map do |letter|
-      ESPERANTO_ALPHABET.index(letter)
+def alphabetize(sentences_array)
+  sentences_array.sort_by do |sentence|
+    sentence.split("").map do |character|
+      ESPERANTO_ALPHABET.index(character)
+    end
   end
 end
